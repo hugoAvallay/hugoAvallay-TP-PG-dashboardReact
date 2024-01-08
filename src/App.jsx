@@ -1,32 +1,17 @@
-import "./assets/css/app.css";
-import { SideBar } from "./components/SideBar";
-import { TopBar } from "./components/TopBar";
-import { Footer } from "./components/Footer";
-import { TableMovies } from "./pages/movies-list-page";
-import { ContentRowTop } from "./pages/home-admin-page";
+import './assets/css/app.css'
+import { ContentWrapper } from './components/ContentWrapper'
+import { Sidebar } from './components/Sidebar'
 
 function App() {
+
   return (
-    <>
-      <div id="wrapper">
-        <SideBar />
+    <div id="wrapper">
 
-        <div id="content-wrapper" className="d-flex flex-column">
-          <div id="content">
-            <TopBar />
+      <Sidebar />
+      <ContentWrapper />
 
-            <div className="container-fluid">
-              
-              <ContentRowTop/>
-              <TableMovies />
-            </div>
-          </div>
-
-          <Footer />
-        </div>
-      </div>
-    </>
-  );
+    </div>
+  )
 }
 
-export default App;
+export default App
